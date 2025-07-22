@@ -190,5 +190,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// ----- EMAILJS INTEGRATION FOR CONTACT FORM -----
+(function(){
+    var contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            emailjs.init('AadC5ha7tJacI0wgo'); // Your EmailJS API Key
+            emailjs.sendForm('service_6h947lj', 'template_j2km39q', contactForm)
+                .then(function() {
+                    contactForm.reset();
+                    document.getElementById('thankYouMsg').style.display = 'block';
+                }, function(error) {
+                    alert('Oops! There was a problem sending your message.');
+                });
+        });
+    }
+})();
+
 
 
