@@ -620,24 +620,43 @@ footer{
     .featured-box{
         flex-direction: column;
         justify-content: center;
-        height: 100vh;
+        height: auto;
+        min-height: 100vh;
+        padding: 50px 0 20px 0;
     }
     .featured-text{
         width: 100%;
         order: 2;
         justify-content: center;
         align-content: flex-start;
-        min-height: 60vh;
+        min-height: auto;
+        padding: 20px 0;
+    }
+    .featured-name{
+        min-height: 120px;
+        display: flex;
+        align-items: center;
+        line-height: 1.2;
+    }
+    .featured-text-info{
+        margin-bottom: 20px;
     }
     .social_icons{
         margin-top: 2em;
+        margin-bottom: 100px;
     }
     .featured-image{
         order: 1;
         justify-content: center;
-        min-height: 150px;
+        min-height: auto;
         width: 100%;
-        margin-top: 65px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    .scroll-btn{
+        bottom: 30px;
+        width: 140px;
+        height: 48px;
     }
     .image, .image img{
         width: 150px;
@@ -668,6 +687,10 @@ footer{
 @media only screen and (max-width: 540px){
     .featured-name{
         font-size: 40px;
+        min-height: 100px;
+        display: flex;
+        align-items: center;
+        line-height: 1.2;
     }
     .project-box{
         width: 100%;
@@ -679,6 +702,58 @@ footer{
         width: 100%;
     }
 }
+
+/* ----- MOBILE EXTRA SMALL SCREENS (iPhone SE and similar) ----- */
+@media only screen and (max-width: 400px) and (max-height: 700px) {
+    .featured-box{
+        padding: 60px 0 20px 0;
+        min-height: 100vh;
+        justify-content: center;
+    }
+    
+    .featured-image{
+        margin-top: 40px;
+        margin-bottom: 25px;
+    }
+    
+    .image, .image img{
+        width: 120px;
+        height: 120px;
+    }
+    
+    .featured-name{
+        font-size: 32px;
+        min-height: 80px;
+        margin-block: 15px;
+    }
+    
+    .featured-text-info{
+        font-size: 14px;
+        margin-bottom: 15px;
+        padding: 0 10px;
+    }
+    
+    .featured-text-btn{
+        margin-bottom: 15px;
+    }
+    
+    .social_icons{
+        margin-top: 1em;
+        margin-bottom: 80px;
+    }
+    
+    .scroll-btn{
+        bottom: 20px;
+        width: 130px;
+        height: 45px;
+        font-size: 13px;
+    }
+    
+    .scroll-btn i{
+        font-size: 18px;
+    }
+}
+
 /* ----- BASE ----- */
 
 
